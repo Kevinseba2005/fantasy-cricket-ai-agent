@@ -1,0 +1,33 @@
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "BedrockAccess",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:InvokeModel"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SNSPublish",
+            "Effect": "Allow",
+            "Action": [
+                "sns:Publish"
+            ],
+            "Resource": "arn:aws:sns:us-east-1:816344831012:FantasyCricketAlerts"
+        },
+        {
+            "Sid": "CloudWatchLogs",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
